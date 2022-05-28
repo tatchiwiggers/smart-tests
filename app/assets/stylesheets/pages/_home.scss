@@ -1,0 +1,166 @@
+// Specific CSS for your home-page
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
+//home
+.btn-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: -400px;
+  height: 100vh;
+}
+
+.botao-home a {
+  text-decoration: none;
+  background-color: #0f3d5e;
+  border: 2px solid white;
+  color: white;
+  border-radius: 40px;
+  transition-duration: 0.4s;
+  font-size: 20px;
+  padding: 20px;
+  font-family: 'Montserrat', sans-serif;
+  // width: 350px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.botao-home a:hover {
+  background-color: white;
+  color: #0f3d5e;
+}
+
+//banner
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  max-height:100%;
+}
+
+.banner img{
+  justify-content: center;
+}
+
+.banner h1 {
+  margin-top: 120px;
+  margin-bottom: -10px;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 90px;
+  font-weight: bold;
+  text-shadow: 5px 5px black;
+  font-family: 'Montserrat', sans-serif;
+}
+
+//create
+.mt-3 {
+  margin-top: 5rem !important;
+}
+//create new
+.mt-5 {
+  margin-top: 15rem !important;
+ }
+
+ .mt-4 {
+  margin-top: 10rem !important;
+ }
+
+ //create tests
+ .card-area {
+   display: flex;
+   justify-content: flex-end;
+ }
+
+//botões do devise
+.btn2 {
+  margin-left: 50px;
+}
+
+
+.btn {
+  text-decoration: none;
+  background-color: #0f3d5e;
+  border: 2px solid #0f3d5e;
+  color: white;
+  border-radius: 40px;
+  transition-duration: 0.4s;
+  font-size: 15px;
+  padding: 10px;
+  font-family: 'Montserrat', sans-serif;
+  width: 200px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 20px;
+  margin-left: 45px
+}
+
+.btn:hover {
+  background-color:white;
+  color: #0f3d5e;
+}
+
+.form-check {
+  display: block;
+  min-height: 1.5rem;
+  margin-bottom: 0.125rem;
+  margin-left: -12px;
+}
+
+.btn1{
+  text-decoration: none;
+  background-color: rgb(223, 222, 222);
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(0, 0, 0);
+  align-items: center;
+  display: flex;
+  text-align: center;
+  width: 130px;
+}
+
+.nav-item {
+  align-items: center;
+  display: flex;
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 70px;
+  height: 70px;
+}
+
+
+  // Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .banner {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .banner {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .banner {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .banner {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .banner {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

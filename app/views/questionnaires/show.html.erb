@@ -1,0 +1,32 @@
+<div class="row justify-content-center mt-4 mb-5">
+  <div class="col-md-3">
+
+  <h3 class="mb-4"><%= @questionnaire.name %></h3>
+
+  <% @questionnaire.questions.each do |question| %>
+    <h4><%= question.name %></h4>
+
+    <% case question.question_type %>
+      <% when 'single_choice' %>
+        <% question.answers.each do |answer| %>
+          <p>
+            <%= radio_button_tag question.id, answer.id %>
+            <%= answer.name %>
+          </p>
+        <% end %>
+      <% when 'multiple_choice' %>
+        <% question.answers.each do |answer| %>
+          <p>
+            <%= check_box_tag question.id, answer.id %>
+            <%= answer.name %>
+          </p>
+        <% end %>
+      <% when 'long_answer' %>
+        <%= text_area_tag question.id %>
+    <% end %>
+  <% end %>
+
+<%= link_to 'Edit', edit_questionnaire_path(@questionnaire), class: "btn btn-outline-primary mt-4" %>
+<%= link_to 'Back', questionnaires_path, class: "btn btn-outline-secondary mt-2" %>
+</div>
+</div>
