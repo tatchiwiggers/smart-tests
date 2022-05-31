@@ -16,6 +16,21 @@
     </tr>
   </thead>
 
+           <button class="coffee">
+            <a href="https://open.spotify.com/playlist/7nCRh8ivvFmxhVqpD6PqM0?si=08f214d682d24cc3">
+              <div>
+                <span>
+                  <p><i class="fa fa-mug-hot ml-2"></i> Need a coffee break?</p><p>:)</p>
+                </span>
+              </div>
+              <div>
+                <span>
+                  <h4><i class="fab fa-spotify"></i> Listen our playlist on Spotify</h4>
+                </span>
+              </div>
+            </a>
+          </button>
+
   <tbody>
     <% @quest_user.each do |questionnaire| %>
       <tr>
@@ -34,14 +49,14 @@
 <% else %>
           <h2> STUDENT <h2>
           <div class="container">
-      <h1>Welcome to your dashboard <%= current_user.name %>!</h1>
-      <div class="start_btn">
-        <a><%= link_to 'Start Quiz', new_questionnaire_path %></a>
+      <h1>Welcome to your dashboard, <%= current_user.name %>!</h1>
+      <div class="start_btns">
+        <a><button><%= link_to 'Start', new_questionnaire_path %></button></a>
       </div>
 
     <!-- Info Box -->
     <div class="info_box">
-        <div class="info-title"><span>Some Rules of this Quiz</span></div>
+        <div class="info-title"><span>Some Rules</span></div>
         <div class="info-list">
             <div class="info">1. You will have only <span>15 seconds</span> per each question.</div>
             <div class="info">2. Once you select your answer, it can't be undone.</div>
@@ -57,18 +72,6 @@
 
 
 <% end %>
-<button class=coffee>
-            <a href="https://open.spotify.com/playlist/7nCRh8ivvFmxhVqpD6PqM0?si=08f214d682d24cc3">
-                  <div>
-                    <span>
-                      <p><i class="fa fa-mug-hot"></i> Need a coffee break?</p><p>:)</p>
-                    </span>
-                  </div>
-                  <div>
-                    <span>
-                      <h4><i class="fab fa-spotify"></i> Listen our playlist on Spotify</h4>
-                    </span>
-                  </div>
-              </a>
-          </button>
+
+
 </div>
