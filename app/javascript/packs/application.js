@@ -15,5 +15,5 @@ ActiveStorage.start()
 import "controllers"
 import "bootstrap"
 import "../stylesheets/application"
-import "../plugins/questions"
-import "../plugins/script"
+import "../packs/questions"
+import "../packs/script"

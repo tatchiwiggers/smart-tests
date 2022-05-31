@@ -70,7 +70,7 @@ class QuestionnairesController < ApplicationController
       :name,
       :token,
       questions_attributes: [
-          :destroy,
+          :_destroy,
           :id,
           :question_type,
           :name,
