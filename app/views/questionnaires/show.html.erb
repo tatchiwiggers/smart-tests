@@ -2,10 +2,10 @@
 <div class="row justify-content-center mt-4 mb-5">
   <div class="col-md-3">
 
-  <h3 class="mb-4"><%= @questionnaire.name %></h3>
+  <h3 class="mb-4"><strong><%= @questionnaire.name %></strong></h3>
 
   <% @questionnaire.questions.each do |question| %>
-    <h4><%= question.name %></h4>
+    <h4 class="mt-3 mb-4"><%= question.name %></h4>
 
     <% case question.question_type %>
       <% when 'single_choice' %>
@@ -27,7 +27,7 @@
     <% end %>
   <% end %>
 
-<%= link_to 'Edit', edit_questionnaire_path(@questionnaire), class: "btn btn-outline-primary mt-4" %>
+<%= link_to 'Edit', edit_questionnaire_path(@questionnaire), class: "btn btn-outline-primary mt-3" %>
 <%= link_to 'Back', questionnaires_path, class: "btn btn-outline-secondary mt-2" %>
 </div>
 </div>

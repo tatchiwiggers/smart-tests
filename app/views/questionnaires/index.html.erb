@@ -45,14 +45,16 @@
 
 </div>
 <% else %>
-          <h2> STUDENT <h2>
+
           <div class="container">
-      <%# <h1>Welcome to your dashboard <%= current_user.name %>!</h1> %>
-      <div class="start_btn"><button>Start Quiz</button></div>
+      <h2>Welcome to your dashboard, <%= current_user.name %>!</h2>
+      <div class="start_btns">
+      <a><button>Start</button></a>
+      </div>
 
     <!-- Info Box -->
     <div class="info_box">
-        <div class="info-title"><span>Some Rules of this Quiz</span></div>
+        <div class="info-title"><span>Some Rules of this test.</span></div>
         <div class="info-list">
             <div class="info">1. You will have only <span>15 seconds</span> per each question.</div>
             <div class="info">2. Once you select your answer, it can't be undone.</div>
@@ -61,7 +63,7 @@
             <div class="info">5. You'll get points on the basis of your correct answers.</div>
         </div>
         <div class="buttons">
-            <button class="quit">Exit Quiz</button>
+            <button class="quit">Exit</button>
             <button class="restart">Continue</button>
         </div>
     </div>
