@@ -8,7 +8,7 @@
 }
 
 body{
-  background: rgb(224, 224, 224);
+    background: lightgrey;
 }
 
 ::selection{
@@ -62,12 +62,12 @@ body{
 
  .start_btns a  {
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: #0f3d5e;
 }
 
  .start_btns a:hover {
   color: white;
-  background-color: black;
+  background-color: #0f3d5e;
  }
 
 
