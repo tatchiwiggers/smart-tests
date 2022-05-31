@@ -1,5 +1,5 @@
 class QuestionnairesController < ApplicationController
-  before_action :set_questionnaire, only: %i[ show edit update destroy ]
+  before_action :set_questionnaire, only: %i[show edit update destroy ]
 
   def index
     @questionnaires = Questionnaire.all
@@ -8,6 +8,7 @@ class QuestionnairesController < ApplicationController
   end
 
   def show
+  @questionnaire = Questionnaire.find(params[:id])
   end
 
   def new
@@ -53,6 +54,11 @@ class QuestionnairesController < ApplicationController
     end
   end
 
+  def search
+    @token = params[:q]
+    @quest_stu = Questionnaire.find_by(token: @token)
+  end
+
   private
 
   def set_questionnaire
@@ -62,6 +68,7 @@ class QuestionnairesController < ApplicationController
   def questionnaire_params
     params.require(:questionnaire).permit(
       :name,
+      :token,
       questions_attributes: [
           :destroy,
           :id,

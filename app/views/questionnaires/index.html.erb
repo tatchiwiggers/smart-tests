@@ -6,7 +6,7 @@
 
 <%= link_to 'Add a new one', new_questionnaire_path, class: "btn btn-primary" %>
 
-<h3 class="mt-3">Subjects</h3>
+<h1>Subject</h1>
     <section class="card-section mt-3">
       <div class="card-area">
     <% @quest_user.each do |questionnaire| %>
@@ -32,9 +32,9 @@
               <div class="inside-page">
                 <div class="inside-page__container">
                   <h3 class="inside-page__text">
-                      <p><%= link_to 'Show', questionnaire, class: "btn3" %></p>
-                      <p><%= link_to 'Edit', edit_questionnaire_path(questionnaire), class: "btn3" %></p>
-                      <p><%= button_to "Delete", questionnaire, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn3" %></p>
+                      <p><%= link_to 'Show Test', questionnaire, class: "btn-teste" %></p>
+                      <p><%= link_to 'Edit', edit_questionnaire_path(questionnaire), class: "btn-teste" %></p>
+                      <p><%= button_to "Delete", questionnaire, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn-teste" %></p>
                       </h3>
                   </div>
               </div>
@@ -42,28 +42,28 @@
             <%end%>
         </div>
         </section>
-<button class="coffee mt-3 mb-5">
-            <a href="https://open.spotify.com/playlist/7nCRh8ivvFmxhVqpD6PqM0?si=08f214d682d24cc3">
-                  <div>
-                    <span>
-                      <p><i class="fa fa-mug-hot"></i> Need a coffee break?</p><p>:)</p>
-                    </span>
-                  </div>
-                  <div>
-                    <span>
-                      <h4><i class="fab fa-spotify"></i> Listen our playlist on Spotify</h4>
-                    </span>
-                  </div>
-              </a>
-          </button>
-</div>
 
+</div>
 <% else %>
 
-      <div class="container mt-3">
-        <h2>Welcome to your dashboard, <%= current_user.name %>!</h2>
+          <div class="container">
+      <h2>Welcome to your dashboard, <%= current_user.name %>!</h2>
+      <form class='form-id'action='/search'>
+      <input type="text" name='q' placeholder="Your test Key" aria-label="Key">
+      <button class="btn-teste" type="submit"> Show test</button>
+      </form>
+
+<section class="card-section mt-3">
+      <div class="card-area">
+
+        </div>
+        </section>
+
+
+</h1>
+
       <div class="start_btns">
-      <a><button><%= link_to 'Start', new_questionnaire_path %></button></a>
+      <a><button>Start</button></a>
       </div>
 
     <!-- Info Box -->
@@ -126,4 +126,19 @@
         </div>
     </div>
 <% end %>
+<button class=coffee>
+            <a href="https://open.spotify.com/playlist/7nCRh8ivvFmxhVqpD6PqM0?si=08f214d682d24cc3">
+                  <div>
+                    <span>
+                      <p><i class="fa fa-mug-hot"></i> Need a coffee break?</p><p>:)</p>
+                    </span>
+                  </div>
+                  <div>
+                    <span>
+                      <h4><i class="fab fa-spotify"></i> Listen our playlist on Spotify</h4>
+                    </span>
+                  </div>
+              </a>
+          </button>
 </div>
+

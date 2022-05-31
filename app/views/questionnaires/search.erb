@@ -1,0 +1,35 @@
+<%= render 'shared/navbar' %>
+<h2>Welcome to your test, <%= current_user.name %>!</h2>
+<section class="card-section mt-3">
+      <div class="card-area">
+                  <div class="card">
+            <div class="flip-card">
+                <div class="flip-card__container">
+                  <div class="card-front">
+                    <div class="card-front__tp card-front__tp--quiz">
+                      <h2 class="card-front__heading">
+                        <%=@quest_stu.name%>
+                      </h2>
+                    </div>
+                      <div class="card-front__bt">
+                        <p class="card-front__text-view card-front__text-view--quiz">
+                          View me
+                        </p>
+                      </div>
+                    </div>
+                    <div class="card-back">
+                    </div>
+                </div>
+              </div>
+              <div class="inside-page">
+                <div class="inside-page__container">
+                  <h3 class="inside-page__text">
+                      <p><%= link_to 'Start test', @quest_stu, class: "btn-teste" %></p>
+                      </h3>
+                  </div>
+              </div>
+            </div>
+
+
+</div>
+</section>
