@@ -77,7 +77,6 @@
   margin-left: 50px;
 }
 
-
 .btn {
   text-decoration: none;
   background-color: #0f3d5e;
@@ -98,6 +97,28 @@
 .btn:hover {
   background-color:white;
   color: #0f3d5e;
+}
+
+.btn3 {
+  text-decoration: none;
+  background-color: #0f3d5e;
+  border: 2px solid #0f3d5e;
+  color: white;
+  border-radius: 40px;
+  transition-duration: 0.4s;
+  font-size: 15px;
+  padding: 10px;
+  font-family: 'Montserrat', sans-serif;
+  width: 200px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 70px;
+  margin-left: 10px
+}
+
+.google-btn {
+  margin-top: 20px;
+  margin-left: 39px
 }
 
 .form-check {
