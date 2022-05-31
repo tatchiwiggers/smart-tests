@@ -1,4 +1,4 @@
-<div class="container mt-4">
+<div class="container mt-3">
   <div class="row justify-content-center">
     <div class="col-md-3">
 <h2>Sign up</h2>
@@ -22,9 +22,11 @@
     <%= f.input :password_confirmation,
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
+    <div class="form-check form-switch">
     <%= f.input :teacher_role,
-                label: 'I\'m a teacher!',
+                label: 'I\'m a teacher',
                 as: :boolean, checked_value: true, unchecked_value: false %>
+    </div>
   </div>
 
   <div class="form-actions">
