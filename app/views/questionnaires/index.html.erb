@@ -8,55 +8,54 @@
 
 <%= link_to 'Add a new one', new_questionnaire_path, class: "btn btn-primary" %>
 
-<table class="mt-3">
-  <thead>
-    <tr>
-      <th>Subject</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-           <button class="coffee">
-            <a href="https://open.spotify.com/playlist/7nCRh8ivvFmxhVqpD6PqM0?si=08f214d682d24cc3">
-              <div>
-                <span>
-                  <p><i class="fa fa-mug-hot ml-2"></i> Need a coffee break?</p><p>:)</p>
-                </span>
-              </div>
-              <div>
-                <span>
-                  <h4><i class="fab fa-spotify"></i> Listen our playlist on Spotify</h4>
-                </span>
-              </div>
-            </a>
-          </button>
-
-  <tbody>
+<h1>Subject</h1>
+    <section class="card-section mt-3">
+      <div class="card-area">
     <% @quest_user.each do |questionnaire| %>
-      <tr>
-        <td><%= questionnaire.name %></td>
-        <td><%= link_to 'Show', questionnaire, class: "btn btn-secondary" %></td>
-        <td><%= link_to 'Edit', edit_questionnaire_path(questionnaire), class: "btn btn-secondary" %></td>
-        <td><%= link_to 'Destroy', questionnaire, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-secondary" %></td>
-      </tr>
-    <% end %>
-   </tbody>
-</table>
-<br>
+              <div class="card">
+            <div class="flip-card">
+                <div class="flip-card__container">
+                  <div class="card-front">
+                    <div class="card-front__tp card-front__tp--quiz">
+                      <h2 class="card-front__heading">
+                        <%=questionnaire.name%>
+                      </h2>
+                    </div>
+                      <div class="card-front__bt">
+                        <p class="card-front__text-view card-front__text-view--quiz">
+                          View me
+                        </p>
+                      </div>
+                    </div>
+                    <div class="card-back">
+                    </div>
+                </div>
+              </div>
+              <div class="inside-page">
+                <div class="inside-page__container">
+                  <h3 class="inside-page__text">
+                      <p><%= link_to 'Show Test', questionnaire, class: "btn-teste" %></p>
+                      <p><%= link_to 'Edit', edit_questionnaire_path(questionnaire), class: "btn-teste" %></p>
+                      <p><%= button_to "Delete", questionnaire, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn-teste" %></p>
+                      </h3>
+                  </div>
+              </div>
+            </div>
+            <%end%>
+        </div>
+        </section>
 </div>
 </div>
 </div>
 <% else %>
           <h2> STUDENT <h2>
           <div class="container">
-      <h1>Welcome to your dashboard, <%= current_user.name %>!</h1>
-      <div class="start_btns">
-        <a><button><%= link_to 'Start', new_questionnaire_path %></button></a>
-      </div>
+      <%# <h1>Welcome to your dashboard <%= current_user.name %>!</h1> %>
+      <div class="start_btn"><button>Start Quiz</button></div>
 
     <!-- Info Box -->
     <div class="info_box">
-        <div class="info-title"><span>Some Rules</span></div>
+        <div class="info-title"><span>Some Rules of this Quiz</span></div>
         <div class="info-list">
             <div class="info">1. You will have only <span>15 seconds</span> per each question.</div>
             <div class="info">2. Once you select your answer, it can't be undone.</div>
@@ -70,8 +69,62 @@
         </div>
     </div>
 
+    <!-- Quiz Box -->
+    <div class="quiz_box">
+        <header>
+            <div class="title">Start now!</div>
+            <div class="timer">
+                <div class="time_left_txt">Time Left</div>
+                <div class="timer_sec">15</div>
+            </div>
+            <div class="time_line"></div>
+        </header>
+        <section>
+            <div class="que_text">
+                <!-- Here I've inserted question from JavaScript -->
+                <%= javascript_pack_tag 'application' %>
+            </div>
+            <div class="option_list">
+                <!-- Here I've inserted options from JavaScript -->
+            </div>
+        </section>
 
+        <!-- footer of Quiz Box -->
+        <footer>
+            <div class="total_que">
+                <!-- Here I've inserted Question Count Number from JavaScript -->
+            </div>
+            <button class="next_btn">Next Que</button>
+        </footer>
+    </div>
+
+    <!-- Result Box -->
+    <div class="result_box">
+        <div class="icon">
+            <i class="fas fa-crown"></i>
+        </div>
+        <div class="complete_text">You've completed the Quiz!</div>
+        <div class="score_text">
+            <!-- Here I've inserted Score Result from JavaScript -->
+        </div>
+        <div class="buttons">
+            <button class="restart">Replay Quiz</button>
+            <button class="quit">Quit Quiz</button>
+        </div>
+    </div>
 <% end %>
-
-
+<button class=coffee>
+            <a href="https://open.spotify.com/playlist/7nCRh8ivvFmxhVqpD6PqM0?si=08f214d682d24cc3">
+                  <div>
+                    <span>
+                      <p><i class="fa fa-mug-hot"></i> Need a coffee break?</p><p>:)</p>
+                    </span>
+                  </div>
+                  <div>
+                    <span>
+                      <h4><i class="fab fa-spotify"></i> Listen our playlist on Spotify</h4>
+                    </span>
+                  </div>
+              </a>
+          </button>
 </div>
