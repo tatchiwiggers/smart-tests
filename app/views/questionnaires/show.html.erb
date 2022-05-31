@@ -4,8 +4,9 @@
   <div class="col-md-3">
 
   <h3 class="mb-4"><strong><%= @questionnaire.name %></strong></h3>
+  <% if current_user.teacher_role? %>
     <p>Teste token:<%= @questionnaire.token %></p>
-
+  <% end %>
   <% @questionnaire.questions.each do |question| %>
     <h4 class="mt-3 mb-4"><%= question.name %></h4>
 
@@ -33,6 +34,6 @@
 <%= link_to 'Back', questionnaires_path, class: "btn btn-outline-secondary mt-2" %>
 </div>
 <%else%>
-<%= link_to 'Submit Answers', class: "btn btn-outline-primary mt-3" %>
+<%= link_to 'Submit Answers', questionnaires_path, class: "btn mt-3" %>
 <%end%>
 </div>
