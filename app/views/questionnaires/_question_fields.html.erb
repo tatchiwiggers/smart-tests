@@ -11,7 +11,7 @@
     <%= form.hidden_field :_destroy %>
     <%= form.text_field :name, placeholder: 'Question', class: 'form-control' %>
     <small>
-      <%= link_to "Remove", "#", data: { action: "click->nested-form#remove_association" } %>
+      <%= link_to "remove question", "#", data: { action: "click->nested-form#remove_association" } %>
     </small>
   </div>
 
@@ -27,7 +27,7 @@
     <% end %>
 
     <div data-nested-form-target="add_item">
-      <%= link_to "Add Answer", "#", data: { action: "nested-form#add_association" }, class: "btn btn-secondary ms-4" %>
+      <%= link_to "Add Answer", "#", data: { action: "nested-form#add_association" }, class: "btn btn-secondary ms-4 mb-4" %>
     </div>
   </div>
 
