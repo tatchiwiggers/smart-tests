@@ -3,8 +3,10 @@
 <%= form_with(model: questionnaire) do |form| %>
 
   <div class="field mb-2">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+    <p><%= form.label :name %>
+    <%= form.text_field :name %> </p>
+    <p><%= form.label :token %>
+    <%= form.text_field :token %></p>
   </div>
 
   <div data-controller="nested-form" data-nested-form-index-value='QUESTION_RECORD'>
