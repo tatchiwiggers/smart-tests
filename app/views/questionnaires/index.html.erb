@@ -6,8 +6,8 @@
 
 <%= link_to 'Add a new one', new_questionnaire_path, class: "btn btn-primary mb-5" %>
 
-<h3>Subject</h3>
-    <section class="card-section mt-3">
+<h3 class="mt-3">Subject</h3>
+    <section class="card-section mt-2">
       <div class="card-area">
     <% @quest_user.each do |questionnaire| %>
               <div class="card">
@@ -42,7 +42,8 @@
             <%end%>
         </div>
         </section>
-<button class=coffee>
+        <div class="container mt-4">
+<button class="coffee">
             <a href="https://open.spotify.com/playlist/7nCRh8ivvFmxhVqpD6PqM0?si=08f214d682d24cc3">
                   <div>
                     <span>
@@ -53,6 +54,7 @@
                     <span>
                       <h4><i class="fab fa-spotify"></i> Listen our playlist on Spotify</h4>
                     </span>
+                  </div>
                   </div>
               </a>
           </button>
