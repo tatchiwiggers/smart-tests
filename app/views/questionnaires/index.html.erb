@@ -1,6 +1,6 @@
 <%= render 'shared/navbar' %>
 <% if current_user.teacher_role? %>
-<div class="container">
+<div class="container mt">
 
 <p><h1>Assessments</h1></p>
 
@@ -60,11 +60,11 @@
 </div>
 <% else %>
 
-      <div class="container">
+      <div class="container mt-3">
         <h2>Welcome to your dashboard, <%= current_user.name %>!</h2>
       <form class='form-id'action='/search'>
       <input type="text" name='q' placeholder="Your test Key" aria-label="Key">
-      <button class="btn-teste" type="submit"> Show test</button>
+      <button class="btn4" type="submit"> Show test</button>
       </form>
 
 <section class="card-section mt-3">
@@ -77,7 +77,7 @@
 </h1>
 
       <div class="start_btns">
-      <a><button>Start</button></a>
+      <%# <a><button>Start</button></a> %>
       </div>
 
     <!-- Info Box -->
