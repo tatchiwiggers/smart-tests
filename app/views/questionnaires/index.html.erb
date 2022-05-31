@@ -1,8 +1,6 @@
 <%= render 'shared/navbar' %>
 <% if current_user.teacher_role? %>
 <div class="container">
-<div class="row mt-3 mb-5">
-  <div class="col-md-3">
 
 <p><h1>Assessments</h1></p>
 
@@ -44,8 +42,7 @@
             <%end%>
         </div>
         </section>
-</div>
-</div>
+
 </div>
 <% else %>
 
