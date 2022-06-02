@@ -2,6 +2,14 @@
   text-decoration: none;
   margin: 0 auto;
 }
+
+.btnhome{
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  margin-top: 100px;
+  }
+
 .coffee {
   outline: 0;
   border: 0;
@@ -15,6 +23,7 @@
   overflow: hidden;
   align-items: center;
   margin-top: 15px;
+  margin-bottom: 25px;
   text-decoration: none;
   position: relative;
   top: 50%;

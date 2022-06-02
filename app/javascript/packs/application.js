@@ -13,7 +13,9 @@ Turbolinks.start()
 ActiveStorage.start()
 
 import "controllers"
-import "bootstrap"
-import "../stylesheets/application"
-import "../packs/questions"
-import "../packs/script"
+import { runScript } from "../plugins/script";
+
+
+document.addEventListener('turbolinks:load', () => {
+  runScript();
+})
