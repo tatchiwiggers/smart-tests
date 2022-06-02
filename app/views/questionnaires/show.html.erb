@@ -114,10 +114,11 @@
     </div>
 
     <!-- Inside this JavaScript file I've inserted Questions and Options only -->
-    <script src="js/questions.js"></script>
+    <%= javascript_pack_tag 'script'%>
+    <%= javascript_pack_tag 'questions'%>
 
     <!-- Inside this JavaScript file I've coded all Quiz Codes -->
-    <script src="js/script.js"></script>
+
 <%= link_to 'Submit Answers', questionnaires_path, class: "btn mt-3" %>
 
 <%end%>
