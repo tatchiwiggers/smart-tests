@@ -12,7 +12,7 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
             <% if current_user.teacher_role? %>
-            <%= link_to "#", class: "navbar-brand" do %>
+            <%= link_to "#", class: "navbar-ident" do %>
       <%= image_tag "smart_teacher.png" %>
       <% end %>
           <li class="nav-item active">
@@ -28,7 +28,7 @@
             </div>
           </li>
           <% else %>
-          <%= link_to "#", class: "navbar-brand" do %>
+          <%= link_to "#", class: "navbar-ident" do %>
       <%= image_tag "stu.png" %>
       <% end %>
           <li class="nav-item active">
