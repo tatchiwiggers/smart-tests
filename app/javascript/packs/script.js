@@ -1,5 +1,4 @@
 
-
 const runScript = () => {
 
   //selecting all required elements

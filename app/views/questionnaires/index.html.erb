@@ -6,12 +6,11 @@
 
 <%= link_to 'Add a new one', new_questionnaire_path, class: "btn btn-primary mb-5" %>
 
-<h3 class="mt-2">Subject</h3>
+<h3 class="mt-3">Subject</h3>
     <section class="card-section mt-2">
       <div class="card-area">
-      <div class="row">
     <% @quest_user.each do |questionnaire| %>
-              <div class="cardttt mb-5">
+              <div class="card">
             <div class="flip-card">
                 <div class="flip-card__container">
                   <div class="card-front">
@@ -33,7 +32,7 @@
               <div class="inside-page">
                 <div class="inside-page__container">
                   <h3 class="inside-page__text">
-                      <p><%= link_to 'Show', questionnaire, class: "btn" %></p>
+                      <p><%= link_to 'Show Test', questionnaire, class: "btn" %></p>
                       <p><%= link_to 'Edit', edit_questionnaire_path(questionnaire), class: "btn" %></p>
                       <p><%= button_to "Delete", questionnaire, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn" %></p>
                       </h3>
@@ -43,7 +42,7 @@
             <%end%>
         </div>
         </section>
-        <div class="container mt-3">
+        <div class="container mt-4">
 <button class="coffee">
             <a href="https://open.spotify.com/playlist/7nCRh8ivvFmxhVqpD6PqM0?si=08f214d682d24cc3">
                   <div>
@@ -66,7 +65,7 @@
       <div class="container mt-3">
         <h2>Welcome to your dashboard, <%= current_user.name %>!</h2>
       <form class='form-id'action='/search'>
-      <input type="text" name='q' placeholder="Your test key" aria-label="Key">
+      <input type="text" name='q' placeholder="Your test Key" aria-label="Key">
       <button class="btn4" type="submit"> Show test</button>
       </form>
 
