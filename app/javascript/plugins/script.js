@@ -161,7 +161,8 @@ const runScript = () => {
             let scoreTag = '<span>and congrats! 🎉, You got <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';
             scoreText.innerHTML = scoreTag;  //adding new span tag inside score_Text
         }
-        else if(fracao > 48){ // if user scored more than 1
+
+        else if(fracao > 50){ // if user scored more than 1
             let scoreTag = '<span>and nice 😎, You got <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';
             scoreText.innerHTML = scoreTag;
         }
