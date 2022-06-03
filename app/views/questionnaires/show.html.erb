@@ -6,7 +6,7 @@
 
   <% if current_user.teacher_role? %>
   <h3 class="mb-4"><strong><%= @questionnaire.name %></strong></h3>
-    <p>Teste token:<%= @questionnaire.token %></p>
+    <p>Teste token.:<%= @questionnaire.token %></p>
     <% @questionnaire.questions.each do |question| %>
     <h4 class="mt-3 mb-4"><%= question.name %></h4>
 
@@ -56,6 +56,7 @@
 </script>
 
 <div class="start_btn"><button>Start Quiz</button></div>
+
 <!-- Info Box -->
 <div class="info_box">
     <div class="info-title"><span>Some Rules of this Quiz</span></div>

@@ -1,9 +1,10 @@
 <%= render 'shared/navbar' %>
 <div class="container mt-3">
-<h2>Let's go <%#= current_user.name %>!</h2>
+<% if @quest_stu.present?  %>
+<h2>Let's go .!</h2>
 <section class="card-section mt-3">
       <div class="card-area">
-                  <div class="card">
+                  <div class="cardttt">
             <div class="flip-card">
                 <div class="flip-card__container">
                   <div class="card-front">
@@ -30,8 +31,9 @@
                   </div>
               </div>
             </div>
-
-
 </div>
 </section>
+<%else%>
+<h1>You need a token to start a test!</h1>
+<%end%>
 </div>
