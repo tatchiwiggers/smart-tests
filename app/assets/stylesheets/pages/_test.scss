@@ -23,7 +23,7 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
                 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -187,7 +187,7 @@ section .que_text{
 
 section .option_list{
     padding: 20px 0px;
-    display: block;   
+    display: block;
 }
 
 section .option_list .option{
@@ -320,8 +320,8 @@ footer button.show{
     transition: all 0.3s ease;
 }
 
-.result_box .icon{
-    font-size: 100px;
+.result_box .icon img{
+    height: 100px;
     color: #007bff;
     margin-bottom: 10px;
 }
