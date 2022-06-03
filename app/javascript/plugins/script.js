@@ -43,6 +43,7 @@ const runScript = () => {
     let widthValue = 0;
 
     const restart_quiz = result_box.querySelector(".buttons .restart");
+    restart_quiz.style.cssText="display: none;";
     const quit_quiz = result_box.querySelector(".buttons .quit");
 
     // if restartQuiz button clicked
@@ -66,7 +67,7 @@ const runScript = () => {
 
     // if quitQuiz button clicked
     quit_quiz.onclick = ()=>{
-        window.location.reload(); //reload the current window
+      window.location.replace("http://localhost:3000"); //reload the current window
     }
 
     const next_btn = document.querySelector("footer .next_btn");
@@ -150,18 +151,18 @@ const runScript = () => {
         }
         next_btn.classList.add("show"); //show the next button if user selected any option
     }
-
     function showResult(){
-        info_box.classList.remove("activeInfo"); //hide info box
+      let fracao = (userScore * 100) / questions.length
+      info_box.classList.remove("activeInfo"); //hide info box
         quiz_box.classList.remove("activeQuiz"); //hide quiz box
         result_box.classList.add("activeResult"); //show result box
         const scoreText = result_box.querySelector(".score_text");
-        if (userScore > 3){ // if user scored more than 3
+        if (fracao > 75){ // if user scored more than 3
             //creating a new span tag and passing the user score number and total question number
             let scoreTag = '<span>and congrats! 🎉, You got <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';
             scoreText.innerHTML = scoreTag;  //adding new span tag inside score_Text
         }
-        else if(userScore > 1){ // if user scored more than 1
+        else if(fracao > 50){ // if user scored more than 1
             let scoreTag = '<span>and nice 😎, You got <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';
             scoreText.innerHTML = scoreTag;
         }
