@@ -6,10 +6,10 @@
 
 <%= link_to 'Add a new one', new_questionnaire_path, class: "btn btn-primary mb-5" %>
 
-<p><h3 class="mb-5 mt-2">Subject</h3></p>
+<h3 class="mb-5 mt-2">Subject</h3>
     <section class="card-section">
       <div class="card-area">
-      <%# <div class="row"> %>
+       <div class="row">
     <% @quest_user.each do |questionnaire| %>
              <div class="cardttt">
             <div class="flip-card">
@@ -65,15 +65,16 @@
 
       <div class="container mt-3">
         <h2>Welcome to your dashboard, <%= current_user.name %>!</h2>
+    <div class="search">
       <form class='form-id'action='/search'>
       <input type="text" name='q' placeholder="Your test Key:" aria-label="Key">
       <button class="btn4" type="submit"> Show test</button>
       </form>
-
+</div>
 <section class="card-section mt-3">
       <div class="card-area">
+</div>
 
-        </div>
         </section>
 
 

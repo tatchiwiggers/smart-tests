@@ -37,25 +37,31 @@
   margin-top: -23px;
 }
 
+.row {
+  display: flex;
+  justify-content: center;
+  margin-left: 80px;
+}
 
 /* Container to hold all cards in one place */
 .card-area {
-  display: inline-grid;
-  justify-content: flex-start;
-}
-
-.card-area {
-    display: inline-grid;
+    display: flex;
+    justify-content: center;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 16px;
-    justify-content: flex-start;
-    flex-direction: row;
+    flex-direction: row-reverse;
     align-content: center;
     flex-wrap: wrap;
-    margin-right: 174px;
-    margin-top: 15px;
+    // margin-left: -50px;
+    padding: 16px;
+    margin-top: -3px;
+    margin-right: 148px;
 }
 
+.search {
+  position: relative;
+  margin-top: 20px;
+}
 /* Card ============================================*/
 
 /* Area to hold an individual card */
@@ -76,7 +82,8 @@
   position: relative;
   transition: all 1s ease;
   width: 15rem;
-  margin-right: 40px;
+  margin-right: 28px;
+  margin-bottom: 20px;
 }
 
 /* Flip card - covering both the front and inside front page */
