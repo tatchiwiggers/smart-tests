@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get 'search', to: 'questionnaires#search'
   resources :questionnaires
+  resources :student_grades, only: [:create]
 end
