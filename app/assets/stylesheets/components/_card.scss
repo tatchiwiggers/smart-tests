@@ -38,15 +38,22 @@
 }
 
 
-
-
-
 /* Container to hold all cards in one place */
 .card-area {
-  align-items: center;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
+  display: inline-grid;
+  justify-content: flex-start;
+}
+
+.card-area {
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 16px;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-content: center;
+    flex-wrap: wrap;
+    margin-right: 174px;
+    margin-top: 15px;
 }
 
 /* Card ============================================*/
@@ -54,7 +61,7 @@
 /* Area to hold an individual card */
 .card-section {
   align-items: center;
-  display: flex;
+  display: inline;
   height: 100%;
   justify-content: space-around;
   width: 100%;
@@ -62,13 +69,14 @@
 }
 
 /* A container to hold the flip card and the inside page */
-.card {
+.cardttt {
   background-color: rgba(0,0,0, .05);
   box-shadow: -.1rem 1.7rem 6.6rem -3.2rem rgba(0,0,0,0.5);
   height: 15rem;
   position: relative;
   transition: all 1s ease;
   width: 15rem;
+  margin-right: 40px;
 }
 
 /* Flip card - covering both the front and inside front page */
@@ -152,7 +160,7 @@
 /* Styling for the back side of the flip card */
 
 .card-back {
-  background-color: #fafbfa;
+  background-color: #000000;
   transform: rotateY(180deg);
 }
 
@@ -182,19 +190,19 @@
 /* Functionality ====================================*/
 
 /* This is to keep the card centered (within its container) when opened */
-.card:hover {
+.cardttt:hover {
   box-shadow:
   -.1rem 1.7rem 6.6rem -3.2rem rgba(0,0,0,0.75);
   width: 30rem;
 }
 
 /* When the card is hovered, the flip card container will rotate */
-.card:hover .flip-card__container {
+.cardttt:hover .flip-card__container {
   transform: rotateY(-180deg);
 }
 
 /* When the card is hovered, the shadow on the inside page will shrink to the left */
-.card:hover .inside-page {
+.cardttt:hover .inside-page {
   box-shadow: inset 1rem 0px 5rem -2.5rem rgba(0,0,0,0.1);
 }
 .i{
