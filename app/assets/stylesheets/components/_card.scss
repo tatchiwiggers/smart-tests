@@ -14,7 +14,7 @@
 /* For both inside page's main heading and 'view me' text on card front cover */
 .inside-page__heading,
 .card-front__text-view {
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 800;
   margin-top: .2rem;
 }
@@ -38,6 +38,9 @@
 }
 
 
+
+
+
 /* Container to hold all cards in one place */
 .card-area {
   align-items: center;
@@ -56,18 +59,16 @@
   justify-content: space-around;
   width: 100%;
   background-color: rgb(236, 235, 235);
-  margin-left: 124px;
 }
 
 /* A container to hold the flip card and the inside page */
-.cardttt {
-  // background-color: rgba(0,0,0, .05);
-  // box-shadow: -.1rem 1.7rem 6.6rem -3.2rem rgba(0,0,0,0.5);
+.card {
+  background-color: rgba(0,0,0, .05);
+  box-shadow: -.1rem 1.7rem 6.6rem -3.2rem rgba(0,0,0,0.5);
   height: 15rem;
   position: relative;
   transition: all 1s ease;
-  width: 20rem;
-  // margin-left: 10px;
+  width: 15rem;
 }
 
 /* Flip card - covering both the front and inside front page */
@@ -181,19 +182,19 @@
 /* Functionality ====================================*/
 
 /* This is to keep the card centered (within its container) when opened */
-.cardttt:hover {
+.card:hover {
   box-shadow:
   -.1rem 1.7rem 6.6rem -3.2rem rgba(0,0,0,0.75);
   width: 30rem;
 }
 
 /* When the card is hovered, the flip card container will rotate */
-.cardttt:hover .flip-card__container {
+.card:hover .flip-card__container {
   transform: rotateY(-180deg);
 }
 
 /* When the card is hovered, the shadow on the inside page will shrink to the left */
-.cardttt:hover .inside-page {
+.card:hover .inside-page {
   box-shadow: inset 1rem 0px 5rem -2.5rem rgba(0,0,0,0.1);
 }
 .i{
