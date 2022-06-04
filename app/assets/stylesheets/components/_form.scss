@@ -103,7 +103,7 @@ body{
 
 .info_box .info-list .info span{
     font-weight: 600;
-    color: #007bff;
+    color: #0f3d5e;
 }
 .info_box .buttons{
     height: 60px;
@@ -124,7 +124,7 @@ body{
     border: none;
     outline: none;
     border-radius: 5px;
-    border: 1px solid #007bff;
+    border: 1px solid #0f3d5e;
     transition: all 0.3s ease;
 }
 
@@ -194,7 +194,7 @@ body{
     bottom: 0px;
     left: 0px;
     height: 3px;
-    background: #007bff;
+    background: #0f3d5e;
 }
 
 section{
@@ -308,8 +308,8 @@ footer button{
     outline: none;
     color: #fff;
     border-radius: 5px;
-    background: #007bff;
-    border: 1px solid #007bff;
+    background: #0f3d5e;
+    border: 1px solid #0f3d5e;
     line-height: 10px;
     opacity: 0;
     pointer-events: none;
@@ -318,7 +318,7 @@ footer button{
 }
 
 footer button:hover{
-    background: #0263ca;
+    background: #0f3d5e;
 }
 
 footer button.show{
@@ -344,7 +344,7 @@ footer button.show{
 
 .result_box .icon{
     font-size: 100px;
-    color: #007bff;
+    color: #0f3d5e;
     margin-bottom: 10px;
 }
 
@@ -380,25 +380,25 @@ footer button.show{
     border: none;
     outline: none;
     border-radius: 5px;
-    border: 1px solid #007bff;
+    border: 1px solid #0f3d5e;
     transition: all 0.3s ease;
 }
 
 .buttons button.restart{
     color: #fff;
-    background: #007bff;
+    background: #0f3d5e;
 }
 
 .buttons button.restart:hover{
-    background: #0263ca;
+    background: #0f3d5e;
 }
 
 .buttons button.quit{
-    color: #007bff;
+    color: #0f3d5e;
     background: #fff;
 }
 
 .buttons button.quit:hover{
     color: #fff;
-    background: #007bff;
+    background: #0f3d5e;
 }

@@ -1,10 +1,28 @@
 <%= render 'shared/navbar' %>
 <% if current_user.teacher_role? %>
+        <div class="container">
+<button class="coffee">
+            <a href="https://open.spotify.com/playlist/7nCRh8ivvFmxhVqpD6PqM0?si=08f214d682d24cc3">
+                  <div>
+                    <span>
+                      <p><i class="fa fa-mug-hot"></i> Need a coffee break?</p><p>:)</p>
+                    </span>
+                  </div>
+                  <div>
+                    <span>
+                      <h4><i class="fab fa-spotify"></i> Listen our playlist on Spotify</h4>
+                    </span>
+                  </div>
+                  </div>
+              </a>
+          </button>
+
+</div>
 <div class="container mt">
 
 <p><h1>Assessments</h1></p>
 
-<%= link_to 'Add a new one', new_questionnaire_path, class: "btn btn-primary mb-5" %>
+<%= link_to 'Add new one', new_questionnaire_path, class: "btn btn-primary mb-5" %>
 
 <h3 class="mb-5 mt-2">Subject</h3>
     <section class="card-section">
@@ -43,31 +61,13 @@
             <%end%>
         </div>
         </section>
-        <div class="container mt-3">
-<button class="coffee">
-            <a href="https://open.spotify.com/playlist/7nCRh8ivvFmxhVqpD6PqM0?si=08f214d682d24cc3">
-                  <div>
-                    <span>
-                      <p><i class="fa fa-mug-hot"></i> Need a coffee break?</p><p>:)</p>
-                    </span>
-                  </div>
-                  <div>
-                    <span>
-                      <h4><i class="fab fa-spotify"></i> Listen our playlist on Spotify</h4>
-                    </span>
-                  </div>
-                  </div>
-              </a>
-          </button>
-
-</div>
 <% else %>
 
       <div class="container mt-3">
         <h2>Welcome to your dashboard, <%= current_user.name %>!</h2>
     <div class="search">
       <form class='form-id'action='/search'>
-      <input type="text" name='q' placeholder="Your test Key:" aria-label="Key">
+      <input type="text" name='q' placeholder="Your test key:" aria-label="Key">
       <button class="btn4" type="submit"> Show test</button>
       </form>
 </div>

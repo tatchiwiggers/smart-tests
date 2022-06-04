@@ -1,9 +1,16 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
-      <%= image_tag "logo_navbar_azul.png" %>
+ <% if current_user.teacher_role? %>
+                <%= link_to "#", class: "navbar-ident" do %>
+                <%= image_tag "smart_teacher.png" %>
     <% end %>
-
+<% else %>
+ <%= link_to "#", class: "navbar-ident" do %>
+              <%= image_tag "stu.png" %>
+              <% end %>
+    <%#= link_to "#", class: "navbar-brand" do %>
+      <%#= image_tag "logo_navbar_azul.png" %>
+ <% end %>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -12,34 +19,34 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
             <% if current_user.teacher_role? %>
-            <%= link_to "#", class: "navbar-ident" do %>
-      <%= image_tag "smart_teacher.png" %>
-      <% end %>
-          <li class="nav-item active">
-            <%= link_to "Home.", "http://localhost:3000/", class: "nav-link" %>
+                <%#= link_to "#", class: "navbar-ident" do %>
+                <%#= image_tag "smart_teacher.png" %>
+                <%# end %>
+              <li class="nav-item active">
+                <%= link_to "Home", "http://localhost:3000/", class: "nav-link" %>
               <li class="nav-item">
                 <%= link_to " Create one", "http://localhost:3000/questionnaires/new", class: "nav-link" %>
               </li>
-          </li>
-          <li class="nav-item dropdown">
-            <%= image_tag "lamp.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= button_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-            </div>
-          </li>
-          <% else %>
-          <%= link_to "#", class: "navbar-ident" do %>
-      <%= image_tag "stu.png" %>
-      <% end %>
-          <li class="nav-item active">
-            <%= link_to "Home!", "http://localhost:3000/", class: "nav-link" %>
               </li>
-          <li class="nav-item dropdown">
-            <%= image_tag "lamp.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= button_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+              <li class="nav-item dropdown">
+                <%= image_tag "lamp.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                  <%= button_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+                </div>
+             </li>
+            <% else %>
+              <%#= link_to "#", class: "navbar-ident" do %>
+              <%#= image_tag "stu.png" %>
+              <%# end %>
+            <li class="nav-item active">
+              <%= link_to "Home", "http://localhost:3000/", class: "nav-link" %>
+            </li>
+            <li class="nav-item dropdown">
+                <%= image_tag "lamp.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <%= button_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
             </div>
-          </li>
+            </li>
           <%end%>
         <% else %>
           <li class="nav-item">
