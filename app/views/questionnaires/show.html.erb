@@ -29,6 +29,16 @@
         <%= text_area_tag question.id %>
     <% end %>
     <% end %>
+    <div class="grades">
+    <h3 class="mb-4"><strong>Student grades:</strong></h3>
+    <ol>
+    <% @questionnaire.student_grades.each do |grade|%>
+    <li>
+    <p><%=grade.user.name%> - Score: <%= grade.score %></p>
+    </li>
+    <% end %>
+    </ol>
+    </div>
   <%= link_to 'Edit', edit_questionnaire_path(@questionnaire), class: "btn btn-outline-primary mt-3" %>
 <%= link_to 'Back', questionnaires_path, class: "btn btn-outline-secondary mt-2" %>
 </div>
