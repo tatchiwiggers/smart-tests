@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   }
   root to: 'pages#home'
   get 'search', to: 'questionnaires#search'
-  resources :questionnaires
-  resources :student_grades, only: [:create]
+  resources :questionnaires, except: [:show]
+  scope 'questionnaires' do
+    get ':id', to: 'questionnaires#show'
+    post ':id/score', to: 'student_grades#save_score'
+  end
 end

@@ -66,8 +66,15 @@ const runScript = () => {
 
   // if quitQuiz button clicked
   quit_quiz.onclick = ()=>{
-    window.location.replace("http://localhost:3000"); //reload the current window
-  }
+    const text_score = document.querySelector("#scoreuser")
+    text_score.value = userScore
+    document.getElementById("submitscore").submit();
+    setTimeout(() => {
+      window.location.replace("http://localhost:3000"); //reload the current window
+    }, 500);
+    }
+
+
 
   const next_btn = document.querySelector("footer .next_btn");
   const bottom_ques_counter = document.querySelector("footer .total_que");
@@ -162,7 +169,7 @@ const runScript = () => {
           scoreText.innerHTML = scoreTag;  //adding new span tag inside score_Text
       }
       else if(fracao > 50){ // if user scored more than 1
-          let scoreTag = '<span>and nice 😎, You got <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';
+          let scoreTag = `<span>and nice 😎, You got <p id='score'> ${userScore}</p> out of <p>${questions.length}</p></span>`;
           scoreText.innerHTML = scoreTag;
       }
       else{ // if user scored less than 1
@@ -170,6 +177,8 @@ const runScript = () => {
           scoreText.innerHTML = scoreTag;
       }
   }
+
+
 
   function startTimer(time){
       counter = setInterval(timer, 1000);

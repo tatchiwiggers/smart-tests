@@ -1,8 +1,7 @@
 class StudentGradesController < ApplicationController
-  def create
-    @grade = StudentGrade.new
-    @grade.user = current_user
-    @grade.score = params[:score]
-    @grade.questionnaire = Questionnaire.find(params[:id])
+  skip_before_action :verify_authenticity_token
+
+  def save_score
+    StudentGrade.create(score: params["score"].to_i, user_id: current_user.id, questionnaire_id: params[:id])
   end
 end
