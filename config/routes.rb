@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   scope 'questionnaires' do
     get ':id', to: 'questionnaires#show'
     post ':id/score', to: 'student_grades#save_score'
+    get ':id/grades', to: 'questionnaires#grades', as: 'grades'
   end
 end
