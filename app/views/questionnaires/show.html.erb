@@ -6,24 +6,24 @@
 
   <% if current_user.teacher_role? %>
   <h3 class="mb-4"><strong><%= @questionnaire.name %></strong></h3>
-    <p>Teste token.: <%= @questionnaire.token %></p>
+    <h3>Teste token.: <%= @questionnaire.token %></h3>
     <% @questionnaire.questions.each do |question| %>
     <h4 class="mt-3 mb-4"><%= question.name %></h4>
 
     <% case question.question_type %>
       <% when 'single_choice' %>
         <% question.answers.each do |answer| %>
-          <p>
+          <h3>
             <%= radio_button_tag question.id, answer.id %>
             <%= answer.name %>
-          </p>
+          </h3>
         <% end %>
       <% when 'multiple_choice' %>
         <% question.answers.each do |answer| %>
-          <p>
+          <h3>
             <%= check_box_tag question.id, answer.id %>
             <%= answer.name %>
-          </p>
+          </h3>
         <% end %>
       <% when 'long_answer' %>
         <%= text_area_tag question.id %>
@@ -38,21 +38,21 @@
 
 <script>
 //Switched tab
-  window.onblur = function () {
-    // do some stuff after tab was changed e.g.
-    alert('Are you cheating? You switched the tab.');
-}
+//   window.onblur = function () {
+//     // do some stuff after tab was changed e.g.
+//     alert('Are you cheating? You switched the tab.');
+// }
 
-  let siteTitle = '';
-  window.addEventListener('blur', () => {
-    siteTitle = document.title;
-    document.title = 'Come back! :c';
-  });
-  window.addEventListener('focus', () => {
-    document.title = siteTitle;
-  });
+//   let siteTitle = '';
+//   window.addEventListener('blur', () => {
+//     siteTitle = document.title;
+//     document.title = 'Come back! :c';
+//   });
+//   window.addEventListener('focus', () => {
+//     document.title = siteTitle;
+//   });
   let questions = JSON.parse('<%= raw(@questionsr.to_json) %>')
-    console.log(questions)
+
 </script>
 
 <div class="start_btn"><button>Start Test</button></div>
@@ -113,8 +113,8 @@
         <!-- Here I've inserted Score Result from JavaScript -->
     </div>
     <div class="buttons">
-        <button class="restart">Replay Quiz</button>
-        <button class="quit">Quit</button>
+      <button class="restart">Replay Test</button>
+       <button class="quit">Quit</button>
     </div>
 </div>
 </div>
