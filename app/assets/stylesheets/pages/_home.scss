@@ -11,6 +11,23 @@
   height: 100vh;
 }
 
+.container_back {
+  position: relative;
+  margin-left: 37px;
+}
+
+.container_back1 {
+  position: relative;
+  margin-left: 500px;
+  margin-top: 30px;
+}
+
+.container_token {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .botao-home a {
   text-decoration: none;
   background-color: #0f3d5e;
@@ -130,7 +147,6 @@
   font-family: 'Montserrat', sans-serif;
   width: 200px;
   text-align: center;
-  font-family: 'Montserrat', sans-serif;
   margin-top: 70px;
   margin-left: 10px
 }

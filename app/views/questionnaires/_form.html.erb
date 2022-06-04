@@ -20,13 +20,16 @@
       <%= render 'question_fields', form: question %>
     <% end %>
 
+<div class="container">
     <div data-nested-form-target="add_item">
       <%= link_to "Add question", "#", data: { action: "nested-form#add_association" }, class: "btn btn-secondary ms-4", id:"add-question" %>
     </div>
   </div>
-
+</div>
+<div class="container_back">
     <div class="actions mt-2 ms-4">
       <%= form.submit %>
+    </div>
     </div>
   <% end %>
 </div>
