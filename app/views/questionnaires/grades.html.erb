@@ -1,19 +1,22 @@
 <%= render 'shared/navbar' %>
 
 <div class="row justify-content-center mt-3 mb-5">
-  <div class="col-md-3" id="mysite">
+  <div class="col-md-4" id="mysite">
     <% if current_user.teacher_role? %>
       <div class="grades">
         <h3 class="mb-4"><strong>Student grades:</strong></h3>
         <ol>
           <% @questionnaire.student_grades.each do |grade|%>
           <li>
-            <p><%=grade.user.name%> - Score: <%= grade.score %></p>
+            <p><strong>Name:</strong> <%=grade.user.name%></p>
+            <p><strong>Email:</strong> <%=grade.user.email%></p>
+            <p><strong>Score:</strong> <%= grade.score %></p>
           </li>
           <% end %>
         </ol>
+        <%= link_to 'Back', questionnaires_path, class: "btn btn-outline-secondary mt-3" %>
     <%else%>
-      <h3>Hi, if you are a student, you cann´t see the grades :)</h3>
+      <h3>Hi, if you are a student, you can´t see the grades :)</h3>
     <%end%>
     </div>
 </div>
