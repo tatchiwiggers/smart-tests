@@ -63,12 +63,18 @@ const runScript = () => {
         timeText.textContent = "Time Left"; //change the text of timeText to Time Left
         next_btn.classList.remove("show"); //hide the next button
     }
+    console.log(userScore)
 
     // if quitQuiz button clicked
     quit_quiz.onclick = ()=>{
-      window.location.replace("http://localhost:3000"); //reload the current window
+      jQuery.ajax({
+        data: 'score=' + userScore,
+        dataType: 'script',
+        type: 'post',
+        url: "http://localhost:3000/student_grades"
+      }); //reload the current window
+      window.location.replace("http://localhost:3000");
     }
-
     const next_btn = document.querySelector("footer .next_btn");
     const bottom_ques_counter = document.querySelector("footer .total_que");
 
@@ -218,5 +224,5 @@ const runScript = () => {
         bottom_ques_counter.innerHTML = totalQueCounTag;  //adding new span tag inside bottom_ques_counter
     }
 }
-   
+
 export { runScript }
