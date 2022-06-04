@@ -54,9 +54,12 @@
   let questions = JSON.parse('<%= raw(@questionsr.to_json) %>')
 
 </script>
-
+<% if StudentGrade.where(questionnaire_id: @questionnaire.id, user_id: current_user.id).present?
+ %>
+<h1>You already did this test! Thank You</h1>
+<%else%>
 <div class="start_btn"><button>Start Test</button></div>
-
+<%end%>
 <!-- Info Box -->
 <div class="info_box">
     <div class="info-title"><span>Some rules of this test</span></div>
@@ -114,9 +117,13 @@
     </div>
     <div class="buttons">
       <button class="restart">Replay Test</button>
-       <button class="quit">Quit</button>
+      <button class="quit">Quit</button>
+      <form action= "<%=@questionnaire.id%>/score" method="post" id="submitscore">
+        <input type="text" id="scoreuser" name="score" class="d-none">
+      </form>
     </div>
 </div>
 </div>
+
 </div>
 <%end%>

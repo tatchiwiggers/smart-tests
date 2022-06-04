@@ -27,6 +27,7 @@ class QuestionnairesController < ApplicationController
       end
     end
   end
+
   @n = @questions.length
   @numeros = (0..100).to_a
   @loop = @numeros[0...@n]

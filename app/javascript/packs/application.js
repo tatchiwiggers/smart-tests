@@ -17,7 +17,7 @@ import { runScript } from "../packs/script";
 
 
 document.addEventListener('turbolinks:load', () => {
-  runScript();
+  if(document.querySelector(".info_box")){
+    runScript();
+  }
 })
-
-
