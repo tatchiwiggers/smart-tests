@@ -57,7 +57,7 @@
 </script>
 <% if StudentGrade.where(questionnaire_id: @questionnaire.id, user_id: current_user.id).present?
  %>
-<h1>You already did this test! Thank You</h1>
+<%= image_tag "testdone.png" %>
 <%else%>
 <div class="start_btn"><button>Start Test</button></div>
 <%end%>
