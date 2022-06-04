@@ -101,6 +101,9 @@ class QuestionnairesController < ApplicationController
     @quest_stu = Questionnaire.find_by(token: @token)
   end
 
+  def grades
+    @questionnaire = Questionnaire.find(params[:id])
+  end
   private
 
   def set_questionnaire
