@@ -20,9 +20,9 @@
 </div>
 <div class="container mt">
 
-<p><h1>Assessments</h1></p>
+<p><h2><strong>Assessments</strong></h2></p>
 
-<%= link_to 'Add new one', new_questionnaire_path, class: "btn btn-primary mb-5" %>
+<%= link_to 'Add a new one', new_questionnaire_path, class: "btn btn-primary mb-5" %>
 
 <h3 class="mb-5 mt-2">Subject</h3>
     <section class="card-section">
@@ -64,7 +64,7 @@
 <% else %>
 
       <div class="container mt-3">
-        <h2>Welcome to your dashboard, <%= current_user.name %>!</h2>
+        <h2>Welcome to your dashboard, <strong><%= current_user.name %></strong>!</h2>
     <div class="search">
       <form class='form-id'action='/search'>
       <input type="text" name='q' placeholder="Your test key:" aria-label="Key">
