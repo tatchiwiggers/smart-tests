@@ -29,8 +29,8 @@
               </li>
               </li>
               <li class="nav-item dropdown">
-                <%= image_tag "lamp.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <%#= image_tag "lamp.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+                <%# <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown"> %>
                   <%= button_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
                 </div>
               </li>
@@ -41,12 +41,12 @@
             <li class="nav-item active">
               <%= link_to "Home", "http://localhost:3000/", class: "nav-link" %>
             </li>
-            <li class="nav-item dropdown">
-                <%= image_tag "lamp.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                <%= button_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-            </div>
-            </li>
+             <li class="nav-item dropdown">
+                <%#= image_tag "lamp.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+                <%# <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown"> %>
+                  <%= button_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+                </div>
+              </li>
           <%end%>
         <% else %>
           <li class="nav-item">

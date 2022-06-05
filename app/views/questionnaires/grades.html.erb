@@ -2,21 +2,84 @@
 
 <div class="row justify-content-center mt-3 mb-5">
   <div class="col-md-4" id="mysite">
+
+ <div class="container mb-5">
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search ...">
+    </div>
+
+    <script>
+    function myFunction() {
+      // Declare variables
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr");
+
+      // Loop through all table rows, and hide those who don't match the search query
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
+    </script>
+
+    <table class="table table-striped table-hover" id="myTable">
+      <tr class="header">
+
+      <thead>
+        <tr>
+          <th>Email</th>
+          <th>Student</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody>
+
+
+
     <% if current_user.teacher_role? %>
-      <div class="grades">
-        <h3 class="mb-4"><strong>Student grades:</strong></h3>
-        <ol>
+      <%# <div class="grades">
+        <h3 class="mb-4"><strong>Student grades:</strong></h3> %>
+        <%# <ol> %>
           <% @questionnaire.student_grades.each do |grade|%>
-          <li>
-            <p><strong>Name:</strong> <%=grade.user.name%></p>
-            <p><strong>Email:</strong> <%=grade.user.email%></p>
-            <p><strong>Score:</strong> <%= grade.score %></p>
-          </li>
+          <tr>
+          <%# <li> %>
+          <span class="mytooltip tooltip-effect-1">
+              <%# <td class="tooltip-item">= link_to questionnaire.email, questionnaire_path(questionnaire)</td> %>
+            <span class="tooltip-content clearfix">
+            </span>
+            </span>
+
+            <%# <p><strong>Name:</strong>  %>
+             <td><%=grade.user.email%></td></p>
+            <%# <p><strong>Email:</strong>  %>
+            <td><%=grade.user.name%></td></p>
+            <%# <p><strong>Score:</strong>  %>
+             <td><%= grade.score %></td></p>
+
+          <%# </li> %>
+          </tr>
           <% end %>
-        </ol>
+        <%# </ol> %>
+
+
+
+  </tbody>
+        <tr>
+      </table>
         <%= link_to 'Back', questionnaires_path, class: "btn btn-outline-secondary mt-3" %>
+</div>
+
     <%else%>
-      <h3>Hi, if you are a student, you can´t see the grades :)</h3>
+      <h3>Hi, if you are a student, you can't see the grades :)</h3>
     <%end%>
     </div>
 </div>
