@@ -199,6 +199,36 @@
   width: 130px;
 }
 
+
+.btn_ {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: -400px;
+  // height: 100vh;
+  text-decoration: none;
+  background-color: #0f3d5e;
+  border: 2px solid #0f3d5e;
+  color: white;
+  border-radius: 40px;
+  transition-duration: 0.4s;
+  font-size: 15px;
+  padding: 10px;
+  font-family: 'Montserrat', sans-serif;
+  width: 200px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 20px;
+  margin-left: 124px
+
+}
+
+.btn_:hover {
+  background-color:white;
+  color: #0f3d5e;
+}
+
+
 .nav-item {
   align-items: center;
   display: flex;
