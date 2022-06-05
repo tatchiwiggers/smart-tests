@@ -4,7 +4,9 @@ Rails.application.routes.draw do
     sessions: 'users/sessions',
     omniauth_callbacks: 'users/omniauth_callbacks'
   }
+
   root to: 'pages#home'
+
   get 'search', to: 'questionnaires#search'
   resources :questionnaires, except: [:show]
   scope 'questionnaires' do

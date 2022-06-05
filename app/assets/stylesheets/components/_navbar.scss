@@ -18,3 +18,12 @@
   margin-top: 3px;
   width: 120px;
 }
+
+.dropdown-item {
+  color: black;
+}
+
+.dropdown-item:hover {
+  background-color: lightgrey;
+  color: grey;
+}
