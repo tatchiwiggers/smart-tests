@@ -63,9 +63,8 @@
             <%# <p><strong>Email:</strong>  %>
             <td><%=grade.user.name%></td></p>
             <%# <p><strong>Score:</strong>  %>
-             <td><%= grade.score %></td></p>
-
-          <%# </li> %>
+            <td><%= grade.score %></td></p>
+            <%# </li> %>
           </tr>
           <% end %>
         <%# </ol> %>
@@ -75,7 +74,7 @@
   </tbody>
         <tr>
       </table>
-        <%= link_to 'Back', questionnaires_path, class: "btn btn-outline-secondary mt-3" %>
+        <%= link_to 'Back', questionnaires_path, class: "btns btn-outline-secondary mt-3" %>
 </div>
 
     <%else%>
