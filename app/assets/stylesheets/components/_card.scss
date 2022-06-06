@@ -57,22 +57,17 @@
 
 /* Container to hold all cards in one place */
 .card-area {
-
-
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 16px;
     flex-direction: row-reverse;
     align-content: center;
     flex-wrap: wrap;
-    // margin-left: -50px;
     padding: 16px;
-
-
     display: flex;
     justify-content: flex-end;
     position: relative;
     margin-left: 69px;
-    margin-right: 148px;
+    margin-right: 150px;
 }
 
 .search {
@@ -178,7 +173,7 @@
   width: 400px;
   margin-bottom: -21px;
   position: relative;
-  margin-top: -45px;
+  margin-top: 12px;
   margin-left: -27px;
 }
 

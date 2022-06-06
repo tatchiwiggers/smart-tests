@@ -1,7 +1,7 @@
 <%= render 'shared/navbar' %>
 <% if current_user.teacher_role? %>
-        <div class="container">
-<button class="coffee">
+        <div class="container_coffee">
+          <button class="coffee">
             <a href="https://open.spotify.com/playlist/7nCRh8ivvFmxhVqpD6PqM0?si=08f214d682d24cc3" target="_blank">
                   <div>
                     <span>
@@ -63,7 +63,7 @@
         </section>
 <% else %>
 
-      <div class="container mt-3">
+      <div class="container mt-4">
         <h2>Welcome to your dashboard, <strong><%= current_user.name %></strong>!</h2>
     <div class="search">
       <form class='form-id'action='/search'>
