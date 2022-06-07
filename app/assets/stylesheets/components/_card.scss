@@ -192,7 +192,16 @@
 }
 
 .modal-footer {
-  margin-left: -25px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0.75rem;
+  border-top: 1px solid #dee2e6;
+  border-bottom-right-radius: 1px;
+  border-bottom-left-radius: 1px;
+  margin-left: -38px;
 }
 
 .modal-footer1 {
@@ -209,7 +218,7 @@
 }
 
 .form-control {
-  width: 500px;
+  width: 450px;
 }
 /* Inside page */
 
