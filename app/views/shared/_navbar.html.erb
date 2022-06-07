@@ -1,11 +1,11 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon fixed-top">
   <div class="container-fluid">
  <% if current_user.teacher_role? %>
-                <%= link_to "#", class: "navbar-ident" do %>
+                <%= link_to "http://www.smarttests.net/questionnaires/", class: "navbar-ident" do %>
                 <%= image_tag "smart_teacher.png" %>
     <% end %>
 <% else %>
- <%= link_to "#", class: "navbar-ident" do %>
+ <%= link_to "http://www.smarttests.net/questionnaires/", class: "navbar-ident" do %>
               <%= image_tag "stu.png" %>
               <% end %>
     <%#= link_to "#", class: "navbar-brand" do %>
@@ -23,9 +23,9 @@
                 <%#= image_tag "smart_teacher.png" %>
                 <%# end %>
               <li class="nav-item active">
-                <%= link_to "Home", "http://localhost:3000/", class: "dropdown-item" %>
+                <%= link_to "Home", "http://www.smarttests.net/", class: "dropdown-item" %>
               <li class="nav-item">
-                <%= link_to "✚ Create one", "http://localhost:3000/questionnaires/new", class: "dropdown-item" %>
+                <%= link_to "✚ Create one", "http://www.smarttests.net/questionnaires/new", class: "dropdown-item" %>
               </li>
               </li>
               <li class="nav-item dropdown">
@@ -39,7 +39,7 @@
               <%#= image_tag "stu.png" %>
               <%# end %>
             <li class="nav-item active">
-              <%= link_to "Home", "http://localhost:3000/", class: "dropdown-item" %>
+              <%= link_to "Home", "http://www.smarttests.net/", class: "dropdown-item" %>
             </li>
              <li class="nav-item dropdown">
                 <%#= image_tag "lamp.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>

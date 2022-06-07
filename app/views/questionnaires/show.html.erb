@@ -1,12 +1,12 @@
 <%= render 'shared/navbar' %>
 
-<div class="row justify-content-center mt-5 mb-5">
-  <div class="col-md-3" id="mysite">
+<div class="row justify-content-center mt-4 mb-5">
+  <div class="col-md-2" id="mysite">
 
 
   <% if current_user.teacher_role? %>
   <h3 class="mb-4"><strong><%= @questionnaire.name %></strong></h3>
-    <h4>Teste token.: <%= @questionnaire.token %></h4>
+    <h4>Token.: <%= @questionnaire.token %></h4>
     <% @questionnaire.questions.each do |question| %>
     <h4 class="mt-3 mb-4"><%= question.name %></h4>
 
@@ -98,11 +98,16 @@ copybutton.onclick = ()=>{
   let questions = JSON.parse('<%= raw(@questionsr.to_json) %>')
 
 </script>
+<<<<<<< HEAD
+<% if StudentGrade.where(questionnaire_id: @questionnaire.id, user_id: current_user.id).present?%>
+<div class="cont">
+=======
 <% if StudentGrade.where(questionnaire_id: @questionnaire.id, user_id: current_user.id, repeat: false).present?%>
+>>>>>>> a200f6318e42ec458648281b8091041aac57e1a4
 <%= image_tag "testdone.png" %>
 
 <%= link_to '◀ Back', questionnaires_path, class: "btn_" %>
-
+</div>
 <%else%>
 <div class="start_btn"><button>Start Test</button></div>
 <%end%>
