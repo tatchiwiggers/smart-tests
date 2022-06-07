@@ -199,12 +199,22 @@
   width: 130px;
 }
 
+.field {
+  margin-bottom: 0.5rem !important;
+  margin-left: 18px;
+  margin-top: -44px;
+}
+
 .rmv{
   text-decoration: none;
   color: rgb(176, 11, 11);
 }
 .rmv:hover{
   color: red;
+}
+
+.edit {
+  margin-left: 140px;
 }
 
 .cont {
