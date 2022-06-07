@@ -71,8 +71,9 @@
                         Be careful: You can't reactivate deleted tests <br>
                       </div>
                       <div class="modal-footer">
-                        <p><%= link_to 'Yes,delete!', questionnaire_path(questionnaire), method: :delete, class: "btn" %></p>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">No, keep it</button>
+
+                        <p><%= button_to "Yes, Delete!", questionnaire, method: :delete, class: "btn7" %></p>
+                        <button type="button" class="btn7 btn-secondary" data-dismiss="modal">No, keep it</button>
                       </div>
                     </div>
                   </div>
