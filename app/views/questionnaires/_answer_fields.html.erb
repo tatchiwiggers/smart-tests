@@ -4,7 +4,7 @@
     <%= form.text_field :name, placeholder: 'Answer', class: 'form-control' %>
     <%= form.check_box :correct %>  Correct answer
     <small>
-      <%= link_to "remove answer", "#", data: { action: "click->nested-form#remove_association" } %>
+      <%= link_to "*remove answer*", "#", data: { action: "click->nested-form#remove_association" }, class: "rmv" %>
     </small>
   </div>
 </div>
