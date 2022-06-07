@@ -60,7 +60,6 @@ class QuestionnairesController < ApplicationController
   end
 
   def create
-
     @questionnaire = Questionnaire.new(questionnaire_params)
     @questionnaire.user = current_user
 
@@ -103,7 +102,20 @@ class QuestionnairesController < ApplicationController
 
   def grades
     @questionnaire = Questionnaire.find(params[:id])
+    @grades = StudentGrade.where(questionnaire_id: @questionnaire.id)
+    @n = @grades.length
+    @numeros = (0..100).to_a
+    @loop = @numeros[0...@n]
   end
+
+  def grades_update
+    @questionnaire = Questionnaire.find(params[:id])
+    @grades = @questionnaire.student_grades
+    @grades.update(score: params["score"].to_i, user_id: params["user_id"].to_i, questionnaire_id: params["questionnaire_id"].to_i, repeat: params["repeat"])
+    # redirect_to grades_path(@questionnaire)
+
+    end
+
   private
 
   def set_questionnaire
@@ -123,4 +135,5 @@ class QuestionnairesController < ApplicationController
       ]
     )
   end
+
 end

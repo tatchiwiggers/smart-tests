@@ -32,7 +32,50 @@
     <%= link_to 'Student\'s Grades', grades_path, class: "btn btn-outline-secondary mt-3" %>
   <%= link_to 'Edit', edit_questionnaire_path(@questionnaire), class: "btn btn-outline-primary mt-2" %>
 <%= link_to '◀ Back', questionnaires_path, class: "btn btn-outline-secondary mt-2" %>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary mt-2" data-toggle="modal" data-target="#exampleModal">
+  Tell Your Students
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Send a messagens to all your students</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Hello Students! Your <%=@questionnaire.name%> Test is waiting for you!
+        Sign up to <a href="https://www.smarttests.net">https://www.smarttests.net </a> and use the Token: <strong> <%= @questionnaire.token %> </strong> to start. <br>
+        Be careful: You can only take the quiz once! <br>
+        Good Luck and Happy Testing 🍀 <br>
+        Teacher <%= @questionnaire.user.name %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="copy" class="btn btn-primary">Copy message</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </div>
+</div>
+<script>
+let copybutton = document.querySelector("#copy")
+copybutton.onclick = ()=>{
+  /* Get the text field */
+  var copyText = document.querySelector(".modal-body");
+
+  /* Select the text field */
+   /* Copy the text inside the text field */
+  navigator.clipboard.writeText(copyText.innerText);
+  copybutton.innerHTML = "Copied!"
+}</script>
 <%else%>
 
 <div class='mt-8 ml-5'>
@@ -55,8 +98,12 @@
   let questions = JSON.parse('<%= raw(@questionsr.to_json) %>')
 
 </script>
+<<<<<<< HEAD
 <% if StudentGrade.where(questionnaire_id: @questionnaire.id, user_id: current_user.id).present?%>
 <div class="cont">
+=======
+<% if StudentGrade.where(questionnaire_id: @questionnaire.id, user_id: current_user.id, repeat: false).present?%>
+>>>>>>> a200f6318e42ec458648281b8091041aac57e1a4
 <%= image_tag "testdone.png" %>
 
 <%= link_to '◀ Back', questionnaires_path, class: "btn_" %>
