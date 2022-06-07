@@ -13,5 +13,6 @@ Rails.application.routes.draw do
     get ':id', to: 'questionnaires#show'
     post ':id/score', to: 'student_grades#save_score'
     get ':id/grades', to: 'questionnaires#grades', as: 'grades'
+    patch ':id/grades', to: 'questionnaires#grades_update', as: 'gradesedit'
   end
 end

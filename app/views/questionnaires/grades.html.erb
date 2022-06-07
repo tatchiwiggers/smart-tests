@@ -1,13 +1,17 @@
 <%= render 'shared/navbar' %>
 
 <div class="row justify-content-center mt-3 mb-5">
-  <div class="col-md-4" id="mysite">
+  <div class="col-md-6" id="mysite">
 
  <div class="container mb-5">
       <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search ...">
     </div>
 
     <script>
+
+    // repeat.onclick = ()=>{
+
+    // }
     function myFunction() {
       // Declare variables
       var input, filter, table, tr, td, i, txtValue;
@@ -49,7 +53,7 @@
       <%# <div class="grades">
         <h3 class="mb-4"><strong>Student grades:</strong></h3> %>
         <%# <ol> %>
-          <% @questionnaire.student_grades.each do |grade|%>
+          <% @grades.each do |grade|%>
           <tr>
           <%# <li> %>
           <span class="mytooltip tooltip-effect-1">
@@ -57,14 +61,24 @@
             <span class="tooltip-content clearfix">
             </span>
             </span>
-
             <%# <p><strong>Name:</strong>  %>
-             <td><%=grade.user.email%></td></p>
+             <p><td><%=grade.user.email%></td></p>
             <%# <p><strong>Email:</strong>  %>
-            <td><%=grade.user.name%></td></p>
+            <p><td><%=grade.user.name%></td></p>
             <%# <p><strong>Score:</strong>  %>
-             <td><%= grade.score %></td></p>
-
+             <p><td><%= grade.score %></td></p>
+  <td> <%= simple_form_for grade, url: gradesedit_path do |f| %>
+  <div class="form-check form-switch">
+   <%= f.hidden_field :user_id, value: grade.user.id %>
+   <%= f.hidden_field :questionnaire_id, value: @questionnaire.id %>
+   <%= f.hidden_field :score, value: grade.score %>
+      <%= f.input :repeat,
+                label: 'repeat test',
+                as: :boolean, checked_value: true, unchecked_value: false %>
+    </div>
+     <%= f.submit %> </td>
+    <%end%>
+  </div>
           <%# </li> %>
           </tr>
           <% end %>
@@ -75,7 +89,7 @@
   </tbody>
         <tr>
       </table>
-        <%= link_to 'Back', questionnaires_path, class: "btn btn-outline-secondary mt-3" %>
+      <%= link_to 'Back', questionnaires_path, class: "btn btn-outline-secondary mt-3" %>
 </div>
 
     <%else%>
