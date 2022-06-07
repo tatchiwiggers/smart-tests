@@ -113,7 +113,7 @@ class QuestionnairesController < ApplicationController
     @grades = @questionnaire.student_grades
     @grades.update(score: params["score"].to_i, user_id: params["user_id"].to_i, questionnaire_id: params["questionnaire_id"].to_i, repeat: params["repeat"])
     # redirect_to grades_path(@questionnaire)
-
+    raise
     end
 
   private
