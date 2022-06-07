@@ -50,7 +50,8 @@
                       <h3 class="inside-page__text">
                         <p><%= link_to 'Show', questionnaire, class: "btn" %></p>
                         <p><%= link_to 'Edit', edit_questionnaire_path(questionnaire), class: "btn" %></p>
-                        <p><button type="button" class="btn" data-toggle="modal" data-target="#exampleModal">✖</button></p>
+                        <p><%= link_to 'Delete', questionnaires_path, "data-toggle"=>"modal", "data-target"=> "#exampleModal", class: "btn" %></p>
+                        <%# <p><button type="button" class="btn" data-toggle="modal" data-target="#exampleModal">✖</button></p> %>
                       </h3>
                     </div>
                   </div>
@@ -67,10 +68,10 @@
                       </div>
                       <div class="modal-body">
                         Are you sure you want to delete your <%=questionnaire.name%> Test? <br>
-                        Be careful: You can't reactivate deleted tests. <br>
+                        Be careful: You can't reactivate deleted tests <br>
                       </div>
                       <div class="modal-footer">
-                        <p><%= button_to "Yes, Delete!", questionnaire, method: :delete, class: "btn" %></p>
+                        <p><%= link_to 'Yes,delete!', questionnaire_path(questionnaire), method: :delete, class: "btn" %></p>
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">No, keep it</button>
                       </div>
                     </div>
