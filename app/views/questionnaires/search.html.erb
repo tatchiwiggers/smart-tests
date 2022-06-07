@@ -1,5 +1,5 @@
 <%= render 'shared/navbar' %>
-<div class="container mt-3">
+<div class="container mt-4">
 <% if @quest_stu.present?  %>
 <div class="search">
 <h2>Let's go!</h2>
@@ -29,8 +29,8 @@
               <div class="inside-page">
                 <div class="inside-page__container">
                   <h3 class="inside-page1__text">
-                      <p><%= link_to 'Go', @quest_stu, class: "btn mt-3" %></p>
-                      <%= link_to 'Back', questionnaires_path, class: "btn btn-outline-secondary mt-1" %>
+                      <p><%= link_to 'Go ▶', @quest_stu, class: "btn mt-3" %></p>
+                      <%= link_to '◀ Back', questionnaires_path, class: "btn btn-outline-secondary mt-1" %>
                       </h3>
                   </div>
               </div>
@@ -38,11 +38,11 @@
 </div>
 </section>
 <%else%>
-<div class="container_token">
+<div class="container_token mt-4">
 <h4>You need a token to start a test!</h4>
 </div>
 <div class="container_back1">
-<%= link_to 'Back', questionnaires_path, class: "btn btn-outline-secondary mt-1" %>
+<%= link_to '◀ Back', questionnaires_path, class: "btn btn-outline-secondary mt-1" %>
 </div>
 <%end%>
 </div>

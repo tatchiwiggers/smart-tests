@@ -1,4 +1,4 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon fixed-top">
   <div class="container-fluid">
  <% if current_user.teacher_role? %>
                 <%= link_to "#", class: "navbar-ident" do %>
@@ -25,7 +25,7 @@
               <li class="nav-item active">
                 <%= link_to "Home", "http://localhost:3000/", class: "dropdown-item" %>
               <li class="nav-item">
-                <%= link_to " Create one", "http://localhost:3000/questionnaires/new", class: "dropdown-item" %>
+                <%= link_to "✚ Create one", "http://localhost:3000/questionnaires/new", class: "dropdown-item" %>
               </li>
               </li>
               <li class="nav-item dropdown">
