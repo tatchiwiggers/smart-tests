@@ -1,6 +1,10 @@
-<div class="container mt-4">
+<div class="container mt-3">
   <div class="row justify-content-center">
     <div class="col-md-3">
+    <div class="container_img">
+      <%= image_tag "welcome.png" %>
+    </div>
+    <br>
 <h2>Log in</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
