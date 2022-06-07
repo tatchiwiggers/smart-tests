@@ -6,7 +6,7 @@
 
   <% if current_user.teacher_role? %>
   <h3 class="mb-4"><strong><%= @questionnaire.name %></strong></h3>
-    <h4>Teste token.: <%= @questionnaire.token %></h4>
+    <h4>Token.: <%= @questionnaire.token %></h4>
     <% @questionnaire.questions.each do |question| %>
     <h4 class="mt-3 mb-4"><%= question.name %></h4>
 
