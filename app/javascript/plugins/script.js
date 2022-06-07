@@ -71,9 +71,9 @@ const runScript = () => {
         data: 'score=' + userScore,
         dataType: 'script',
         type: 'post',
-        url: "http://localhost:3000/student_grades"
+        url: "http://www.smarttests.net/student_grades"
       }); //reload the current window
-      window.location.replace("http://localhost:3000");
+      window.location.replace("http://www.smarttests.net/");
     }
     const next_btn = document.querySelector("footer .next_btn");
     const bottom_ques_counter = document.querySelector("footer .total_que");
