@@ -1,7 +1,7 @@
 <%= render 'shared/navbar' %>
 
 <div class="row justify-content-center mt-4 mb-5">
-  <div class="col-md-6" id="mysite">
+  <div class="col-md-8" id="mysite">
 
  <div class="container mb-5">
       <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search ...">
@@ -44,7 +44,7 @@
           <th>Student</th>
           <th>Score</th>
           <th>Date</th>
-          <th>Aproved</th>
+          <th>Condition</th>
           <th>Repeat</th>
         </tr>
       </thead>
@@ -82,9 +82,9 @@
    <%= f.hidden_field :questionnaire_id, value: @questionnaire.id %>
    <%= f.hidden_field :score, value: grade.score %>
       <%= f.input :repeat,
-                  as: :boolean %>
+                  as: :boolean %></td>
     </div>
-     <%= f.submit class: "btncheck", value: "✔" %> </td>
+     <td><%= f.submit class: "btncheck", value: "✔" %> </td>
     <%end%>
   </div>
           <%# </li> %>

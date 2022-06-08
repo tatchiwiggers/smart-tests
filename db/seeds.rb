@@ -30,7 +30,7 @@ Answer.create!(question_id: 4, name: "Quebec", correct: false)
 Answer.create!(question_id: 4, name: "Ottawa", correct: true)
 Answer.create!(question_id: 4, name: "Vancouver", correct: false)
 #-----------New Questionnaire---------------------------------------
-Questionnaire.create!(name: "Ruby Basics", token: "ruby", user_id: 1, user_id: User.first.id)
+Questionnaire.create!(name: "Ruby Basics", token: "ruby", user_id: User.first.id)
 Question.create!(name: "Which of the following datatypes are valid in Ruby?", questionnaire_id: 2)
 Answer.create!(question_id: 5, name: "Integer", correct: false)
 Answer.create!(question_id: 5, name: "String", correct: false)
@@ -47,7 +47,7 @@ Answer.create!(question_id: 7, name: "Prints whatever is given and print it to t
 Answer.create!(question_id: 7, name: "Gets input from the user", correct: false)
 Answer.create!(question_id: 7, name: "Save a new variable", correct: false)
 #-----------New Questionnaire---------------------------------------
-Questionnaire.create!(name: "The Beatles", token: "help", user_id: 1, user_id: User.first.id)
+Questionnaire.create!(name: "The Beatles", token: "help", user_id: User.first.id)
 Question.create!(name: "The Beatles were from?", questionnaire_id: 3)
 Answer.create!(question_id: 8, name: "London, England", correct: false)
 Answer.create!(question_id: 8, name: "New York, NY", correct: false)

@@ -1,5 +1,5 @@
 <div class='nested-fields box' data-controller='dynamic-select'>
-  <div class='form-group mb-3'>
+  <div class='form-group mb-2'>
     <%= form.select :question_type,
         options_for_select(Question.question_type_select, selected: form.object.question_type),
         {},

@@ -77,12 +77,34 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 18px;
 }
 
 .btn8:hover {
   background-color:white;
   color: #0f3d5e;
 }
+
+.btncheck {
+  text-decoration: none;
+  background-color: #0f3d5e;
+  border: 2px solid #0f3d5e;
+  color: white;
+  border-radius: 40px;
+  transition-duration: 0.4s;
+  font-size: 15px;
+  padding: 3px;
+  font-family: 'Montserrat', sans-serif;
+  width: 99px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: -3px;
+  margin-left: -58px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 .btn9 {
   text-decoration: none;
@@ -349,7 +371,7 @@
   text-align: center;
   font-family: 'Montserrat', sans-serif;
   margin-top: 20px;
-  margin-left: 124px
+  margin-left: 12px
 
 }
 
