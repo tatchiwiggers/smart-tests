@@ -1,7 +1,7 @@
 <%= render 'shared/navbar' %>
 
 <div class="row justify-content-center mt-4 mb-5">
-  <div class="col-md-4" id="mysite">
+  <div class="col-md-6" id="mysite">
 
  <div class="container mb-5">
       <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search ...">
@@ -43,6 +43,9 @@
           <th>Email</th>
           <th>Student</th>
           <th>Score</th>
+          <th>Date</th>
+          <th>Aproved</th>
+          <th>Repeat</th>
         </tr>
       </thead>
       <tbody>
@@ -67,16 +70,21 @@
             <p><td><%=grade.user.name%></td></p>
             <%# <p><strong>Score:</strong>  %>
              <p><td><%= grade.score %></td></p>
+             <p><td><%= grade.created_at.to_date %></td></p>
+             <p><td><% if (grade.score * 100) / @nquestions >= 70 %>
+             <p class="aprov"> ✔ Approved</td> </p>
+             <% else %>
+             <p class="reprov">✘ Disapproved</td> </p>
+             <%end%>
   <td> <%= simple_form_for grade, url: gradesedit_path do |f| %>
   <div class="form-check form-switch">
    <%= f.hidden_field :user_id, value: grade.user.id %>
    <%= f.hidden_field :questionnaire_id, value: @questionnaire.id %>
    <%= f.hidden_field :score, value: grade.score %>
       <%= f.input :repeat,
-                label: 'repeat test',
-                as: :boolean %>
+                  as: :boolean %>
     </div>
-     <%= f.submit %> </td>
+     <%= f.submit class: "btncheck", value: "✔" %> </td>
     <%end%>
   </div>
           <%# </li> %>
