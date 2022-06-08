@@ -55,6 +55,20 @@
   // margin-left: 80px;
 }
 
+.row3 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+  margin-left: 112px;
+}
+
+.row6 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+  margin-left: 115px;
+}
+
 /* Container to hold all cards in one place */
 .card-area {
     grid-template-columns: 1fr 1fr 1fr;
@@ -140,6 +154,9 @@
   width: 100%;
 }
 
+h2.new{
+  margin-left: 69px;
+}
 /* Styling for the front side of the flip card */
 
 /* container for the front side */

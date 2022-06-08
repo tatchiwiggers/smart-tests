@@ -13,7 +13,7 @@
 
 .container_back {
   position: relative;
-  margin-left: 12px;
+  margin-left: 80px;
 }
 
 .container_back1 {
@@ -24,8 +24,13 @@
 
 .container_back2 {
   position: relative;
-  margin-left: -14px;
+  margin-left: 55px;
   margin-top: 30px;
+}
+
+.container_back3 {
+  position: relative;
+  margin-left: -59px;
 }
 
 .container_token {
@@ -51,6 +56,57 @@
 
 .botao-home a:hover {
   background-color: white;
+  color: #0f3d5e;
+}
+
+.btn8 {
+  text-decoration: none;
+  background-color: #0f3d5e;
+  border: 2px solid #0f3d5e;
+  color: white;
+  border-radius: 40px;
+  transition-duration: 0.4s;
+  font-size: 15px;
+  padding: 10px;
+  font-family: 'Montserrat', sans-serif;
+  width: 200px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 20px;
+  margin-left: 93px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn8:hover {
+  background-color:white;
+  color: #0f3d5e;
+}
+
+.btn9 {
+  text-decoration: none;
+  background-color: #0f3d5e;
+  border: 2px solid #0f3d5e;
+  color: white;
+  border-radius: 40px;
+  transition-duration: 0.4s;
+  font-size: 15px;
+  padding: 10px;
+  font-family: 'Montserrat', sans-serif;
+  width: 200px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 20px;
+  margin-left: 93px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn9:hover {
+  text-decoration: none;
+  background-color:white;
   color: #0f3d5e;
 }
 
@@ -252,7 +308,7 @@
 
 .field {
   margin-bottom: 0.5rem !important;
-  margin-left: 13px;
+  margin-left: 54px;
   margin-top: -62px;
 }
 
@@ -266,7 +322,7 @@
 }
 
 .edit {
-  margin-left: 140px;
+  margin-left: 38px;
 }
 
 .cont {
