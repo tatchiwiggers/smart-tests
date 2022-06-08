@@ -70,7 +70,7 @@ const runScript = () => {
     text_score.value = userScore
     document.getElementById("submitscore").submit();
     setTimeout(() => {
-      window.location.replace("http://localhost:3000"); //reload the current window
+      window.location.replace("http://www.smarttests.net/questionnaires"); //reload the current window
     }, 500);
     }
 
