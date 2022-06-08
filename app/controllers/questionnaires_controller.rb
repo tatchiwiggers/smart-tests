@@ -87,6 +87,7 @@ class QuestionnairesController < ApplicationController
   end
 
   def destroy
+    raise
     @questionnaire.destroy
 
     respond_to do |format|
