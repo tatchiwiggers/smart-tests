@@ -8,7 +8,7 @@ puts 'database is clean!'
 User.create!(email: "prof@teste.com", teacher_role: true, student_role: true, name: "Fernanda T.", password: '123456')
 User.create!(email: "aluno@teste.com", teacher_role: false, student_role: true, name: "Fernanda S.", password: '123456')
 #-----------New Questionnaire---------------------------------------
-Questionnaire.create!(name: "World Capitals", token: "capitals", user_id: 1)
+Questionnaire.create!(name: "World Capitals", token: "capitals", user_id: User.first.id)
 Question.create!(name: "What is the Capital of Mexico?", questionnaire_id: 1)
 Answer.create!(question_id: 1, name: "Mexico City", correct: true)
 Answer.create!(question_id: 1, name: "Tijuana", correct: false)
@@ -30,7 +30,7 @@ Answer.create!(question_id: 4, name: "Quebec", correct: false)
 Answer.create!(question_id: 4, name: "Ottawa", correct: true)
 Answer.create!(question_id: 4, name: "Vancouver", correct: false)
 #-----------New Questionnaire---------------------------------------
-Questionnaire.create!(name: "Ruby Basics", token: "ruby", user_id: 1)
+Questionnaire.create!(name: "Ruby Basics", token: "ruby", user_id: 1, user_id: User.first.id)
 Question.create!(name: "Which of the following datatypes are valid in Ruby?", questionnaire_id: 2)
 Answer.create!(question_id: 5, name: "Integer", correct: false)
 Answer.create!(question_id: 5, name: "String", correct: false)
@@ -47,7 +47,7 @@ Answer.create!(question_id: 7, name: "Prints whatever is given and print it to t
 Answer.create!(question_id: 7, name: "Gets input from the user", correct: false)
 Answer.create!(question_id: 7, name: "Save a new variable", correct: false)
 #-----------New Questionnaire---------------------------------------
-Questionnaire.create!(name: "The Beatles", token: "help", user_id: 1)
+Questionnaire.create!(name: "The Beatles", token: "help", user_id: 1, user_id: User.first.id)
 Question.create!(name: "The Beatles were from?", questionnaire_id: 3)
 Answer.create!(question_id: 8, name: "London, England", correct: false)
 Answer.create!(question_id: 8, name: "New York, NY", correct: false)
