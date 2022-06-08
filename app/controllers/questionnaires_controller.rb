@@ -104,9 +104,7 @@ class QuestionnairesController < ApplicationController
   def grades
     @questionnaire = Questionnaire.find(params[:id])
     @grades = StudentGrade.where(questionnaire_id: @questionnaire.id)
-    @n = @grades.length
-    @numeros = (0..100).to_a
-    @loop = @numeros[0...@n]
+    @nquestions = @questionnaire.questions.count
   end
 
   def grades_update
@@ -115,9 +113,9 @@ class QuestionnairesController < ApplicationController
     @grades.each do |grade|
       if grade.user_id == params[:student_grade][:user_id].to_i
         grade.update(repeat: params["student_grade"]["repeat"])
+        redirect_to grades_path(@questionnaire)
       end
     end
-    # redirect_to grades_path(@questionnaire)
   end
 
   private
@@ -139,5 +137,4 @@ class QuestionnairesController < ApplicationController
       ]
     )
   end
-
 end
